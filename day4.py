@@ -55,7 +55,7 @@ most_minute = pd.Series()
 for i in range(len(df_clean)):
     for minute in range(60):
         if minute >= df_clean.iloc[i]['start'].minute and minute < df_clean.iloc[i]['timestamp'].minute:
-            most_minute = most_minute.append(pd.Series([minute], index = [df_clean.iloc[i]['guard_no']]))
+            most_minute = most_minute.append(pd.Series([minute], index=[df_clean.iloc[i]['guard_no']]))
 
 
 top_most_minute = most_minute.groupby(most_minute.index).value_counts().sort_values(ascending=False)
