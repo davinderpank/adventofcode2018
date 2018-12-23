@@ -27,6 +27,6 @@ def min_react(line):
         results.append(react(line.replace(i, '').replace(i.upper(), '')))
     return min(results)
 
-# or as a line comprehension
+# or as a list comprehension
 # min([react(s.replace(i, '').replace(i.upper(), '')) for i in x_unique])
 
